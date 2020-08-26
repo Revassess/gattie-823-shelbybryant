@@ -17,6 +17,6 @@ public class SumOverArray {
 		}
 		System.out.println("The sum of the array elements is :" + sum);
 		
-		return 0;
+		return sum;
 	}
 }
