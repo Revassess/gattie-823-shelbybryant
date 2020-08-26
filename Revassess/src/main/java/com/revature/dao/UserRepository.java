@@ -7,9 +7,6 @@ import com.revature.model.User;
 public class UserRepository implements CrudRepository{
 
 
-
-
-	
 	public User findUserByUsername(String username) {
 		return null;
 	}
