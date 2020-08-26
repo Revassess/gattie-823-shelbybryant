@@ -1,6 +1,8 @@
 package com.revature.config;
 
 import java.sql.Connection;
+import java.sql.DriverManager;
+import java.sql.SQLException;
 
 /**
  * 
@@ -16,19 +18,22 @@ public class ConnectionUtil {
 	private static ConnectionUtil cu;
 	
 	// add your jdbc url
-	public static final String URL = "";
+	public static final String URL = "javatraining.cyq0oy2vijrb.us-east-2.rds.amazonaws.com";
 	// add your jdbc username
-	public static final String USERNAME = "";
+	public static final String USERNAME = "postgres";
 	// add your jdbc password
-	public static final String PASSWORD = "";
+	public static final String PASSWORD = "password";
 	// name of the created stored procedure in tier 3
 	public static final String TIER_3_PROCEDURE_NAME = "";
 	// name of the created sequence in tier 3
 	public static final String TIER_3_SEQUENCE_NAME = "";
 
 	// implement this method to connect to the db and return the connection object
-	public Connection connect(){
-		return null;
+	public Connection connect() throws SQLException{
+		String url = "jsbc:postgresql:\\javatraining.cyq0oy2vijrb.us-east-2.rds.amazonaws.com:5432\revassess2";
+		String username = "postgres";
+		String password = "password";
+		return DriverManager.getConnection(url,username,password);
 	}
 
 
