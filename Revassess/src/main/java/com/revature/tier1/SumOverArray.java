@@ -1,6 +1,6 @@
 package com.revature.tier1;
 
-import java.util.stream.IntStream;
+
 
 public class SumOverArray {
 
@@ -11,14 +11,11 @@ public class SumOverArray {
 		arr[2] = 3;
 		arr[3] = 4;
 		
-		int sum = IntStream.of(array).sum();
-		
-		if(sum == 10) {
-			System.out.println("The sum of the array is " + sum);
-		} else {
-			System.out.println("There was an error calculating the sum of the array");
+		int sum = 0;
+		for (int i = 0;i<array.length; i++) {
+			sum = sum + array[i];
 		}
-		
+		System.out.println("The sum of the array elements is :" + sum);
 		
 		return 0;
 	}
